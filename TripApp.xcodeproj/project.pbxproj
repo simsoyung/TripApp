@@ -13,6 +13,14 @@
 		465A422F2C04996A004FECFC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 465A422E2C04996A004FECFC /* Base */; };
 		465A42312C049970004FECFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 465A42302C049970004FECFC /* Assets.xcassets */; };
 		465A42342C049970004FECFC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 465A42332C049970004FECFC /* Base */; };
+		465A423C2C049BAE004FECFC /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A423B2C049BAE004FECFC /* TripViewController.swift */; };
+		465A423F2C049C64004FECFC /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465A423E2C049C64004FECFC /* TripTableViewCell.xib */; };
+		465A42402C049C64004FECFC /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A423D2C049C64004FECFC /* TripTableViewCell.swift */; };
+		465A42422C049CF2004FECFC /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A42412C049CF2004FECFC /* TravelModel.swift */; };
+		465A42452C04A063004FECFC /* ADTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465A42442C04A062004FECFC /* ADTableViewCell.xib */; };
+		465A42462C04A063004FECFC /* ADTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A42432C04A062004FECFC /* ADTableViewCell.swift */; };
+		465A42482C04A589004FECFC /* cellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A42472C04A589004FECFC /* cellViewController.swift */; };
+		465A424B2C04B06A004FECFC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 465A424A2C04B06A004FECFC /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,13 @@
 		465A42302C049970004FECFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		465A42332C049970004FECFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		465A42352C049970004FECFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		465A423B2C049BAE004FECFC /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		465A423D2C049C64004FECFC /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		465A423E2C049C64004FECFC /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
+		465A42412C049CF2004FECFC /* TravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
+		465A42432C04A062004FECFC /* ADTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADTableViewCell.swift; sourceTree = "<group>"; };
+		465A42442C04A062004FECFC /* ADTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADTableViewCell.xib; sourceTree = "<group>"; };
+		465A42472C04A589004FECFC /* cellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465A424B2C04B06A004FECFC /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				465A42262C04996A004FECFC /* TripApp */,
+				465A42412C049CF2004FECFC /* TravelModel.swift */,
 				465A42252C04996A004FECFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,7 +76,13 @@
 				465A42272C04996A004FECFC /* AppDelegate.swift */,
 				465A42292C04996A004FECFC /* SceneDelegate.swift */,
 				465A422B2C04996A004FECFC /* ViewController.swift */,
+				465A423B2C049BAE004FECFC /* TripViewController.swift */,
 				465A422D2C04996A004FECFC /* Main.storyboard */,
+				465A423D2C049C64004FECFC /* TripTableViewCell.swift */,
+				465A42472C04A589004FECFC /* cellViewController.swift */,
+				465A42432C04A062004FECFC /* ADTableViewCell.swift */,
+				465A42442C04A062004FECFC /* ADTableViewCell.xib */,
+				465A423E2C049C64004FECFC /* TripTableViewCell.xib */,
 				465A42302C049970004FECFC /* Assets.xcassets */,
 				465A42322C049970004FECFC /* LaunchScreen.storyboard */,
 				465A42352C049970004FECFC /* Info.plist */,
@@ -83,6 +106,9 @@
 			dependencies = (
 			);
 			name = TripApp;
+			packageProductDependencies = (
+				465A424A2C04B06A004FECFC /* Kingfisher */,
+			);
 			productName = TripApp;
 			productReference = 465A42242C04996A004FECFC /* TripApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +137,9 @@
 				Base,
 			);
 			mainGroup = 465A421B2C04996A004FECFC;
+			packageReferences = (
+				465A42492C04B06A004FECFC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 465A42252C04996A004FECFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +154,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465A423F2C049C64004FECFC /* TripTableViewCell.xib in Resources */,
 				465A42312C049970004FECFC /* Assets.xcassets in Resources */,
 				465A42342C049970004FECFC /* Base in Resources */,
 				465A422F2C04996A004FECFC /* Base in Resources */,
+				465A42452C04A063004FECFC /* ADTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +170,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				465A422C2C04996A004FECFC /* ViewController.swift in Sources */,
+				465A423C2C049BAE004FECFC /* TripViewController.swift in Sources */,
+				465A42482C04A589004FECFC /* cellViewController.swift in Sources */,
+				465A42462C04A063004FECFC /* ADTableViewCell.swift in Sources */,
 				465A42282C04996A004FECFC /* AppDelegate.swift in Sources */,
+				465A42422C049CF2004FECFC /* TravelModel.swift in Sources */,
 				465A422A2C04996A004FECFC /* SceneDelegate.swift in Sources */,
+				465A42402C049C64004FECFC /* TripTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,8 +333,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +342,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sesac.TripApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -324,8 +364,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +373,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sesac.TripApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -361,6 +405,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		465A42492C04B06A004FECFC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		465A424A2C04B06A004FECFC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 465A42492C04B06A004FECFC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 465A421C2C04996A004FECFC /* Project object */;
 }
