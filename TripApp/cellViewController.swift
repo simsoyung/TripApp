@@ -13,14 +13,14 @@ extension UILabel{
         self.font = .boldSystemFont(ofSize: 15)
         self.textColor = .black
         self.textAlignment = .left
-        self.numberOfLines = 2
+        self.numberOfLines = 0
     }
     
     func setSubLabel(){
         self.font = .boldSystemFont(ofSize: 14)
         self.textColor = .lightGray
         self.textAlignment = .left
-        self.numberOfLines = 2
+        self.numberOfLines = 0
     }
     
     func setGradeLabel(){
@@ -40,7 +40,6 @@ extension UILabel{
 }
 
 extension UIButton{
-    
     
     func setHeartButton(){
         self.backgroundColor = .clear

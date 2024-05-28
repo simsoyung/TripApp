@@ -17,33 +17,34 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIR-P5-W97">
-                        <rect key="frame" x="32" y="15.999999999999998" width="256" height="20.333333333333329"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0t-Rr-1G0">
-                        <rect key="frame" x="291" y="4" width="25" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcL-Ow-eEr">
+                        <rect key="frame" x="286" y="4" width="30" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="Fro-vY-ITz"/>
-                            <constraint firstAttribute="width" constant="25" id="zlN-6v-nOW"/>
+                            <constraint firstAttribute="height" constant="20" id="CWc-91-K3d"/>
+                            <constraint firstAttribute="width" constant="30" id="q3R-xd-ivL"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain"/>
-                    </button>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="TIR-P5-W97" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="4NK-Jn-KEJ"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TIR-P5-W97" secondAttribute="bottom" constant="16" id="50Q-44-UMh"/>
-                    <constraint firstItem="y0t-Rr-1G0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="PO3-pk-XGj"/>
-                    <constraint firstAttribute="trailing" secondItem="y0t-Rr-1G0" secondAttribute="trailing" constant="4" id="Ujv-wv-VAT"/>
-                    <constraint firstItem="TIR-P5-W97" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="hRM-RV-oGv"/>
-                    <constraint firstAttribute="trailing" secondItem="TIR-P5-W97" secondAttribute="trailing" constant="32" id="xdw-HE-Nhy"/>
+                    <constraint firstItem="TIR-P5-W97" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6B0-2T-sET"/>
+                    <constraint firstAttribute="trailing" secondItem="UcL-Ow-eEr" secondAttribute="trailing" constant="4" id="Ggi-0p-qSe"/>
+                    <constraint firstItem="UcL-Ow-eEr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Xa6-lh-mrq"/>
+                    <constraint firstItem="TIR-P5-W97" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="YWo-PG-P85"/>
+                    <constraint firstAttribute="bottom" secondItem="TIR-P5-W97" secondAttribute="bottom" id="ZI4-cc-4Yb"/>
+                    <constraint firstAttribute="trailing" secondItem="TIR-P5-W97" secondAttribute="trailing" id="cXI-yp-538"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="adButton" destination="y0t-Rr-1G0" id="Lih-P4-sV1"/>
+                <outlet property="adLabel" destination="UcL-Ow-eEr" id="7iI-72-aCu"/>
                 <outlet property="titleADLabel" destination="TIR-P5-W97" id="oP9-zB-EPe"/>
             </connections>
             <point key="canvasLocation" x="138.93129770992365" y="32.04225352112676"/>

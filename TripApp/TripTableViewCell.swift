@@ -9,6 +9,7 @@ import UIKit
 
 class TripTableViewCell: UITableViewCell {
 
+    static let identifier = "TripTableViewCell"
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
@@ -39,7 +40,7 @@ class TripTableViewCell: UITableViewCell {
         travelImage.kf.setImage(with: url)
         travelImage.contentMode = .scaleAspectFill
         travelImage.layer.cornerRadius = 10
+
     }
-    
     
 }

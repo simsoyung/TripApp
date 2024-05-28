@@ -11,53 +11,60 @@ class TripViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     @IBOutlet var travelTableView: UITableView!
     
-    var list = TravelInfo().travel
+    var list = TravelInfo.travel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        travelTableView.rowHeight = 130
+        travelTableView.rowHeight = 150
         travelTableView.delegate = self
         travelTableView.dataSource = self
         
-        let xib = UINib(nibName: "ADTableViewCell", bundle: nil)
-        travelTableView.register(xib, forCellReuseIdentifier: "ADTableViewCell")
+        let xib = UINib(nibName: ADTableViewCell.identifier, bundle: nil)
+        travelTableView.register(xib, forCellReuseIdentifier: ADTableViewCell.identifier)
         
-        let xib2 = UINib(nibName: "TripTableViewCell", bundle: nil)
-        travelTableView.register(xib2, forCellReuseIdentifier: "TripTableViewCell")
+        let xib2 = UINib(nibName: TripTableViewCell.identifier, bundle: nil)
+        travelTableView.register(xib2, forCellReuseIdentifier: TripTableViewCell.identifier)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let ADCell = travelTableView.dequeueReusableCell(withIdentifier: "ADTableViewCell", for: indexPath) as! ADTableViewCell
-        let travelCell = travelTableView.dequeueReusableCell(withIdentifier: "TripTableViewCell", for: indexPath) as! TripTableViewCell
-        
         let data = list[indexPath.row]
-        travelCell.configureCell(data: data)
-        travelCell.awakeFromNib()
-        ADCell.configureADCell(data: data)
-        ADCell.awakeFromNib()
         
-        let like = data.like ?? false ? "heart.fill" : "heart"
-        let button = UIImage(systemName: like)
-        travelCell.heartButton.setImage(button, for: .normal)
-        
-        travelCell.heartButton.tag = indexPath.row
-       // travelCell.heartButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
-        
-        var tripList: [Travel] = []
-        for item in tripList {
-            if item.ad == true{
-                tripList.append(item)
-                return ADCell
-            } else {
-                print("정보가 없습니다.")
+        if data.ad {
+            guard let cell = travelTableView.dequeueReusableCell(withIdentifier: ADTableViewCell.identifier, for: indexPath) as? ADTableViewCell else {
+                return UITableViewCell()
             }
-            list = tripList
-            travelTableView.reloadData()
+            cell.awakeFromNib()
+            cell.configureADCell(data: data)
+            return cell
+        } else {
+            guard let cell = travelTableView.dequeueReusableCell(withIdentifier: TripTableViewCell.identifier, for: indexPath) as? TripTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            cell.awakeFromNib()
+            cell.configureCell(data: data)
+            cell.heartButton.tag = indexPath.row
+            let heart = data.like ?? true ? "heart.fill" : "heart"
+            let button = UIImage(systemName: heart)
+            cell.heartButton.setImage(button, for: .normal)
+            cell.heartButton.addTarget(self, action: #selector(heartButtonClicked), for: .touchUpInside)
+            cell.layer.cornerRadius = 20
+
+            return cell
         }
-        return travelCell
+        
     }
+    
+    @objc
+    func heartButtonClicked(sender: UIButton){
+        list[sender.tag].like?.toggle()
+        travelTableView.reloadData()
+    }
+    
+    
 }
