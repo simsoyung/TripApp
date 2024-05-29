@@ -66,5 +66,25 @@ class TripViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         travelTableView.reloadData()
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = list[indexPath.row]
+        if data.ad{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "ADDetailViewController") as! ADDetailViewController
+            let nav = UINavigationController(rootViewController: vc)
+            vc.contents = data.title
+            nav.modalPresentationStyle = .fullScreen
+            present(nav, animated: true)
+            
+        } else {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+            vc.contents = data.title
+            vc.image = data.travel_image
+            navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        travelTableView.reloadRows(at: [indexPath], with: .automatic)
+        
+    }
 }
