@@ -72,15 +72,14 @@ class TripViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "ADDetailViewController") as! ADDetailViewController
             let nav = UINavigationController(rootViewController: vc)
-            vc.contents = data.title
+            vc.contents = data
             nav.modalPresentationStyle = .fullScreen
             present(nav, animated: true)
             
         } else {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vc = sb.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
-            vc.contents = data.title
-            vc.image = data.travel_image
+            vc.contents = data
             navigationController?.pushViewController(vc, animated: true)
             
         }

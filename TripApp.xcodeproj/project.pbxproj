@@ -23,6 +23,7 @@
 		465A424B2C04B06A004FECFC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 465A424A2C04B06A004FECFC /* Kingfisher */; };
 		46A7EA5F2C070D1E00787311 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A7EA5E2C070D1E00787311 /* DetailViewController.swift */; };
 		46A7EA612C070D2D00787311 /* ADDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A7EA602C070D2D00787311 /* ADDetailViewController.swift */; };
+		46A7EAA22C0871A300787311 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A7EAA12C0871A300787311 /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		465A42472C04A589004FECFC /* cellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellViewController.swift; sourceTree = "<group>"; };
 		46A7EA5E2C070D1E00787311 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		46A7EA602C070D2D00787311 /* ADDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDetailViewController.swift; sourceTree = "<group>"; };
+		46A7EAA12C0871A300787311 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				465A42302C049970004FECFC /* Assets.xcassets */,
 				465A42322C049970004FECFC /* LaunchScreen.storyboard */,
 				465A42352C049970004FECFC /* Info.plist */,
+				46A7EAA12C0871A300787311 /* Font.swift */,
 			);
 			path = TripApp;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46A7EA5F2C070D1E00787311 /* DetailViewController.swift in Sources */,
+				46A7EAA22C0871A300787311 /* Font.swift in Sources */,
 				465A422C2C04996A004FECFC /* ViewController.swift in Sources */,
 				46A7EA612C070D2D00787311 /* ADDetailViewController.swift in Sources */,
 				465A423C2C049BAE004FECFC /* TripViewController.swift in Sources */,

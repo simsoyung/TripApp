@@ -46,6 +46,25 @@ extension UIButton{
         self.tintColor = .white
     }
     
+    func setCheckButton(){
+        self.backgroundColor = UIColor(red: 177/255, green: 158/255, blue: 255/255, alpha: 1.0)
+        self.tintColor = .darkGray
+        self.titleLabel?.font = .boldSystemFont(ofSize: 14)
+        self.titleLabel?.text = "확인!"
+        self.layer.cornerRadius = 10
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.darkGray.cgColor
+    }
+    
 }
 
-
+extension UIImageView{
+    
+    func travelImage(){
+        self.contentMode = .scaleAspectFill
+        self.layer.cornerRadius = 10
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 30
+        self.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMaxYCorner)
+    }
+}
