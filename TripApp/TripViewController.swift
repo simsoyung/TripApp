@@ -40,6 +40,7 @@ class TripViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             }
             cell.awakeFromNib()
             cell.configureADCell(data: data)
+            cell.backgroundColor = randomColor().bgColor
             return cell
         } else {
             guard let cell = travelTableView.dequeueReusableCell(withIdentifier: TripTableViewCell.identifier, for: indexPath) as? TripTableViewCell else {
@@ -70,7 +71,7 @@ class TripViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         let data = list[indexPath.row]
         if data.ad{
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "ADDetailViewController") as! ADDetailViewController
+            let vc = sb.instantiateViewController(withIdentifier: ADDetailViewController.identifier) as! ADDetailViewController
             let nav = UINavigationController(rootViewController: vc)
             vc.contents = data
             nav.modalPresentationStyle = .fullScreen
@@ -78,12 +79,13 @@ class TripViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             
         } else {
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let vc = sb.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+            let vc = sb.instantiateViewController(identifier: DetailViewController.identifier) as! DetailViewController
             vc.contents = data
             navigationController?.pushViewController(vc, animated: true)
             
         }
         travelTableView.reloadRows(at: [indexPath], with: .automatic)
+        
         
     }
 }

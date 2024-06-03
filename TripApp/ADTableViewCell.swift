@@ -9,8 +9,6 @@ import UIKit
 
 class ADTableViewCell: UITableViewCell {
     
-    static let identifier = "ADTableViewCell"
-    
     @IBOutlet var titleADLabel: UILabel!
     @IBOutlet var adLabel: UILabel!
     
@@ -31,12 +29,6 @@ class ADTableViewCell: UITableViewCell {
         titleADLabel.numberOfLines = 2
         titleADLabel.layer.cornerRadius = 20
         
-        if data.ad {
-            backgroundColor = UIColor(red: 0.7451, green: 0.898, blue: 0.702, alpha: 1.0)
-        } else {
-            backgroundColor = .white
-            //backgroundColor = UIColor(red: 237/255, green: 236/255, blue: 170/255, alpha: 1.0)
-        }
     }
     override func prepareForReuse() {
         super.prepareForReuse()

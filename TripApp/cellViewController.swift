@@ -7,6 +7,28 @@
 
 import UIKit
 
+extension UIColor {
+    static func random() -> UIColor {
+        return UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
+    }
+}
+
+protocol IdProtocol: AnyObject {
+    static var identifier: String { get }
+}
+
+extension UIViewController: IdProtocol {
+    static var identifier: String {
+        return String(describing: self)
+    }
+}
+
+extension UITableViewCell: IdProtocol {
+    static var identifier: String {
+        return String(describing: self)
+    }
+}
+
 extension UILabel{
     
     func setMainLabel(){

@@ -8,8 +8,6 @@
 import UIKit
 
 class TripTableViewCell: UITableViewCell {
-
-    static let identifier = "TripTableViewCell"
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!

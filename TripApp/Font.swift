@@ -11,4 +11,6 @@ struct DetailFont {
     static let textView = UIFont.systemFont(ofSize: 13, weight: .regular)
 }
 
-
+struct randomColor {
+    let bgColor: UIColor = .random()
+}
